@@ -1,177 +1,79 @@
-.landing_wrap {
-    background: linear-gradient(to top right, #2b2844, #453e7b);
-    width: 100%;
-    min-height: 96vh;
-    overflow: hidden;
-    border-radius: 4px;
-    max-width: 1700px;
-    
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 2vh;
-    margin-bottom: 2vh;
+.hero_content {
+    width: 500px;
+    padding: 48px 100px 100px;
     color: #fdfdfd;
 
+    button {
+        border: none;
+        background: #633ad9;
+        color: #fdfdfd;
+        padding: 16px 45px;
+        border-radius: 32px;
+        font-size: 15px;
+        margin-top: 28px;
+        box-shadow: 2px 4px 17px #00000091;
 
-    .toolbar {
-        width: 100%;
-        padding: 7%;
-        padding-top: 5%;
-        box-sizing: border-box;
-        display: inline-flex;
-        flex-wrap: wrap;
-        row-gap: 25px;
+        margin-left: auto;
+        margin-right: 25px;
+        cursor: pointer;
+        white-space: nowrap;
+    }
 
-        .logo_space {
-            min-width: 80%;
+    .light {
+        background: transparent;
+        border: 1px solid #fdfdfd;
+        color: #fdfdfd;
+        box-shadow: none;
+        margin-right: 0;
+    }
+}
+
+.hero_image {
+    height: 610px;
+
+    .complex_circles {
+        z-index: 0;
+        width: 540px;
+        height: 200px;
+        margin-left: auto;
+        margin-right: auto;
+
+        div {
+            position: absolute;
+            width: 450px;
+            height: 450px;
+            border-radius: 50%;
+            border: 3px solid #615d89;
+        }
+
+        div:first-child {
+            margin-top: 37px;
+            margin-left: 90px;
+        }
+
+        div:last-child {
+            margin-top: 152px;
+            margin-left: 13px;
+        }
+    }
+
+    .video_wrap {
+        width: 400px;
+        height: 500px;
+        overflow: hidden;
+        margin-top: -250px;
+        border-radius: 190px 190px 20px 20px;
+        box-shadow: -20px -15px 20px #0000006b;
+        z-index: 9000;
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+
+        video {
+            width: 100%;
             height: 100%;
-            display: block;
-            cursor: pointer;
-
-            .logo {
-                font-weight: 600;
-                color: #fdfdfd;
-                font-size: 12px;
-                display: inline-block;
-
-                i {
-                    font-size: 18px;
-                    display: block;
-                }
-
-                label {
-                    margin-top: -16px;
-                    margin-left: 20px;
-                    display: block;
-                    cursor: pointer;
-                    text-transform: uppercase;
-                }
-            }
+            object-fit: cover;
+            z-index: 10;
         }
-
-        .menu-options {
-            display: inline-flex;
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            min-width: 20%;
-            width: fit-content;
-            line-height: 20px;
-
-            li {
-                margin-left: 10px;
-                margin-right: 10px;
-                text-align: right;
-
-                font-weight: 600;
-                color: #fdfdfd;
-                font-size: 14px;
-                width: 50%;
-                white-space: nowrap;
-                cursor: pointer;
-            }
-
-            li:hover{
-                font-weight: 700;
-            }
-        }
-    }
-
-    .hero {
-        display: inline-flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        width: 100%;
-        margin-top: 10vh;
-
-        .hero_image {
-            height: 610px;
-
-            .complex_circles {
-                z-index: 0;
-                width: 540px;
-                height: 200px;
-                margin-left: auto;
-                margin-right: auto;
-
-                div {
-                    position: absolute;
-                    width: 450px;
-                    height: 450px;
-                    border-radius: 50%;
-                    border: 3px solid #615D89;
-                }
-
-                div:first-child {
-                    margin-top: 37px;
-                    margin-left: 90px;
-                }
-
-                div:last-child {
-                    margin-top: 152px;
-                    margin-left: 13px;
-                }
-            }
-
-            .video_wrap {
-                width: 400px;
-                height: 500px;
-                overflow: hidden;
-                margin-top: -250px;
-                border-radius: 190px 190px 20px 20px;
-                box-shadow: -20px -15px 20px #0000006b;
-                z-index: 9000;
-                position: relative;
-                margin-left: auto;
-                margin-right: auto;
-
-                video {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                    z-index: 10;
-                }
-            }
-        }
-
-        .hero_content {
-            width: 500px;
-            padding: 48px 100px 100px;
-            color: #fdfdfd;
-
-            button{
-                border: none;
-                background: #633AD9;
-                color: #fdfdfd;
-                padding: 16px 45px;
-                border-radius: 32px;
-                font-size: 15px;
-                margin-top: 28px;
-                box-shadow: 2px 4px 17px #00000091;
-
-                margin-left: auto;
-                margin-right: 25px;
-                cursor: pointer;
-                white-space: nowrap;
-            }
-
-            .light{
-                background: transparent;
-                border: 1px solid #fdfdfd;
-                color: #fdfdfd;
-                box-shadow: none;
-                margin-right: 0;
-            }
-        }
-    }
-
-    .footer{
-        padding: 10px;
-        text-align: center;
-        margin-top: 9%;
-        margin-bottom: 0;
-        bottom: 0;
-        font-size: 12px;
-        font-weight: 400;
     }
 }

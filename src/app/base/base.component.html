@@ -1,0 +1,30 @@
+<div class="landing_wrap">
+    <div class="toolbar">
+        <div class="logo_space">
+            <div class="logo" (click)="setDisplay('landing')">
+                <i class="icon icon-thumbprint"></i>
+                <label>Provvy.</label>
+            </div>
+        </div>
+        <ul class="menu-options">
+            <li (click)="setDisplay('market')">Marketplace</li>
+            <li (click)="setDisplay('artists')">Artist's Center</li>
+        </ul>
+    </div>
+
+    <div class="hero" *ngIf="display == 'landing'">
+        <app-landing></app-landing>
+    </div>
+
+    <div class="hero" *ngIf="display == 'market'">
+        <h1>Marketplace</h1>
+    </div>
+
+    <div class="hero" *ngIf="display == 'artists'">
+        <app-artist-creation-center></app-artist-creation-center>
+    </div>
+
+    <div class="footer">
+        Copyright 2021 Provvy co. 
+    </div>
+</div>

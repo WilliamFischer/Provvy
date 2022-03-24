@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { MasterService } from '../master.service';
 
 @Component({
   selector: 'app-landing',
@@ -6,13 +8,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./landing.component.scss']
 })
 export class LandingComponent implements OnInit {
-
-
-  display: string = 'home';
-
-  constructor() { }
+  constructor(public master : MasterService, public router : Router) { }
 
   ngOnInit(): void {
   }
 
+  setDisplay(display){
+    this.master.setDisplay(display);
+  }
 }

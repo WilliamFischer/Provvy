@@ -1,0 +1,96 @@
+.landing_wrap {
+    background: linear-gradient(to top right, #2b2844, #453e7b);
+    width: 100%;
+    min-height: 96vh;
+    overflow: hidden;
+    border-radius: 4px;
+    max-width: 1700px;
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    color: #fdfdfd;
+
+    .toolbar {
+        width: 100%;
+        padding: 7%;
+        padding-top: 5%;
+        box-sizing: border-box;
+        display: inline-flex;
+        flex-wrap: wrap;
+        row-gap: 25px;
+
+        .logo_space {
+            min-width: 80%;
+            height: 100%;
+            display: block;
+            cursor: pointer;
+
+            .logo {
+                font-weight: 600;
+                color: #fdfdfd;
+                font-size: 12px;
+                display: inline-block;
+
+                i {
+                    font-size: 18px;
+                    display: block;
+                }
+
+                label {
+                    margin-top: -16px;
+                    margin-left: 20px;
+                    display: block;
+                    cursor: pointer;
+                    text-transform: uppercase;
+                }
+            }
+        }
+
+        .menu-options {
+            display: inline-flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            min-width: 20%;
+            width: fit-content;
+            line-height: 20px;
+
+            li {
+                margin-left: 10px;
+                margin-right: 10px;
+                text-align: right;
+
+                font-weight: 600;
+                color: #fdfdfd;
+                font-size: 14px;
+                width: 50%;
+                white-space: nowrap;
+                cursor: pointer;
+            }
+
+            li:hover {
+                font-weight: 700;
+            }
+        }
+    }
+
+    .hero {
+        display: inline-flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        margin-top: 10vh;
+    }
+}
+
+.footer {
+    padding: 10px;
+    text-align: center;
+    margin-top: 9%;
+    margin-bottom: 0;
+    bottom: 0;
+    font-size: 12px;
+    font-weight: 400;
+}
