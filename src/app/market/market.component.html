@@ -1,0 +1,15 @@
+<div class="market_wrap">
+    <div class="flex_wrap">
+        <div class="left_side" [ngClass]="{ 'no_width' : !showSideFilter}">
+            <app-big-filter></app-big-filter>
+        </div>
+        <div class="right_side">
+            <div class="top_bit" *ngIf="!displayingNFT.length">
+                <app-little-filter></app-little-filter>
+            </div>
+            <div class="main_bit">
+                <app-nft-grid></app-nft-grid>
+            </div>
+        </div>
+    </div>
+</div>

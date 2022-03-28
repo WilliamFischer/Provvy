@@ -1,21 +1,104 @@
-.profile_image {
-    background: green;
-    width: 40px;
-    height: 40px;
-    display: block;
+.slideUpBigin {
+    background: #e7eaef;
+    width: 74vw;
+    height: 59vh;
+    border-bottom: 8px solid #aeaac9;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: -1px 7px 20px #b7b7b7;
+    margin-left: auto;
+    margin-right: auto;
 
-    img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+    .simple_details {
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+
+        input,
+        textarea {
+            width: 100%;
+            max-width: 400px;
+            margin-bottom: 10px;
+            padding: 15px;
+            border: none;
+            box-sizing: border-box;
+            font-size: 12px;
+        }
+
+        button{
+            background: #aeaac9;
+            width: 100%;
+            padding: 9px;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            box-sizing: border-box;
+            margin: 0;
+        }
     }
-}
 
-.simple_details {
-    background: blue;
+    .custom-file {
+        display: block;
+        width: fit-content;
+        height: fit-content;
 
-    input{
-        width: 100%;
-        margin-bottom: 10px;
+        color: #8e8e8e;
+        font-family: "Playfair Display", serif;
+
+        margin-left: auto;
+        margin-right: auto;
+        box-sizing: border-box;
+        border: 2px dotted #e8e8e8;
+
+        .profile_image {
+            background: #565656;
+            width: 120px;
+            height: 120px;
+            display: block;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 2px solid #928bcc;
+            box-shadow: 0 0 10px #606060;
+            margin: -158px auto 50px;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        input {
+            visibility: hidden;
+            width: 100%;
+            height: 170px;
+            margin-top: 150px;
+        }
+
+        .done_image img {
+            height: 200px;
+            width: 200px;
+            object-fit: cover;
+            margin-top: -60px;
+            // background: black;
+        }
+
+        .closeIco {
+            display: block;
+            float: right;
+            margin: 10px;
+            margin-top: -100px;
+            font-size: 21px;
+            color: #2c3e4f;
+        }
+    }
+
+    .non-dotted {
+        border: none !important;
+        margin-top: -10%;
     }
 }

@@ -1,3 +1,11 @@
+.flex_wrap {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row-reverse;
+    width: 100%;
+}
+
 .hero_content {
     width: 500px;
     padding: 48px 100px 100px;

@@ -1,4 +1,4 @@
-<div class="landing_wrap">
+<div class="landing_wrap" [ngClass]="{'padded' : display == 'landing' }">
     <div class="toolbar">
         <div class="logo_space">
             <div class="logo" (click)="setDisplay('landing')">
@@ -17,7 +17,7 @@
     </div>
 
     <div class="hero" *ngIf="display == 'market'">
-        <h1>Marketplace</h1>
+        <app-market></app-market>
     </div>
 
     <div class="hero" *ngIf="display == 'artists'">

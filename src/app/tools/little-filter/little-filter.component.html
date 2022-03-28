@@ -1,0 +1,24 @@
+<div class="little_filter_wrap">
+    <div class="item_count">6 items</div>
+    <div class="main_filter_bit">
+        <select>
+            <option selected>Single Items</option>
+            <option>All Items</option>
+            <option>Bundles</option>
+        </select>
+        <select>
+            <option selected disabled>Sort By</option>
+            <option>Recently Listed</option>
+            <option>Price (low - high)</option>
+            <option>Price (high - low)</option>
+        </select>
+        <div class="view_toggle">
+            <div class="side" (click)="changeView(1)" [ngClass]="{'selected' : gridView === 1}">
+                <fa-icon [icon]="faThLarge"></fa-icon>
+            </div>
+            <div class="side" (click)="changeView(2)" [ngClass]="{'selected' : gridView === 2}">
+                <fa-icon [icon]="faSquare"></fa-icon>
+            </div>
+        </div>
+    </div>
+</div>

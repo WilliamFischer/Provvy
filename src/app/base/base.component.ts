@@ -8,7 +8,7 @@ import { MasterService } from '../master.service';
 })
 export class BaseComponent implements OnInit {
 
-  display :  string = '';
+  display :  string = 'landing';
 
   constructor(public master : MasterService) { }
 

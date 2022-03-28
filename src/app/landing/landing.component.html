@@ -1,19 +1,21 @@
-<div class="hero_content">
-    <h1>Be a part of the most special stories 🎨</h1>
-    <p>Create fearlessly with content you love, and uncover the world's most unique digital collectibles</p>
-    <button (click)="setDisplay('market')">Browse Galleries</button>
-    <button class="light" (click)="setDisplay('artists')">Upload Artwork</button>
-</div>
-<div class="hero_image">
-    <div class="complex_circles">
-        <div></div>
-        <div></div>
-        <div></div>
+<div class="flex_wrap">
+    <div class="hero_content">
+        <h1>Be a part of the most special stories 🎨</h1>
+        <p>Create fearlessly with content you love, and uncover the world's most unique digital collectibles</p>
+        <button (click)="setDisplay('market')">Browse Galleries</button>
+        <button class="light" (click)="setDisplay('artists')">Upload Artwork</button>
     </div>
-    <div class="video_wrap">
-        <video playsinline autoplay [muted]="'muted'" loop>
-            <source src="assets/soft.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+    <div class="hero_image">
+        <div class="complex_circles">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="video_wrap">
+            <video playsinline autoplay [muted]="'muted'" loop>
+                <source src="assets/soft.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
     </div>
 </div>

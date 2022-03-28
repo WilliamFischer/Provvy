@@ -1,0 +1,50 @@
+<div class="big_filter_wrap">
+
+    <!-- IF NFT IS CLOSED -->
+    <div class="filter_tab filter_head" (click)="toggleSideFilter()"  *ngIf="!displayingNFT.length">
+        <fa-icon *ngIf="showSideFilter" [icon]="faArrowLeft" class="right_ico"></fa-icon>
+        <fa-icon *ngIf="!showSideFilter" [icon]="faArrowRight" class="right_ico"></fa-icon>
+    </div>
+
+    <!-- IF NFT IS OPEN -->
+    <div class="filter_tab filter_head" (click)="clearNFT()"  *ngIf="displayingNFT.length">
+        <fa-icon [icon]="faHome" class="right_ico"></fa-icon>
+    </div>
+
+    <!-- IF TOGGLE IS CLOSED & NFT IS OPEN -->
+    <div class="filter_tab filter_head" (click)="toggleSideFilter()" *ngIf="!showSideFilter && displayingNFT.length">
+        <fa-icon [icon]="faArrowRight" class="right_ico"></fa-icon>
+    </div>
+
+    <!-- IF TOGGLE IS OPEN & NFT IS OPEN -->
+    <div class="filter_tab filter_head" (click)="toggleSideFilter()" *ngIf="showSideFilter && displayingNFT.length">
+        <fa-icon [icon]="faArrowLeft" class="right_ico forced_right"></fa-icon>
+    </div>
+
+    <div *ngIf="showSideFilter">
+        <div class="filter_tab">
+            Status
+            <fa-icon [icon]="faAngleDown" class="right_ico"></fa-icon>
+        </div>
+        <div class="filter_tab">
+            Price
+            <fa-icon [icon]="faAngleDown" class="right_ico"></fa-icon>
+        </div>
+        <div class="filter_tab">
+            Collections
+            <fa-icon [icon]="faAngleDown" class="right_ico"></fa-icon>
+        </div>
+        <div class="filter_tab">
+            Chains
+            <fa-icon [icon]="faAngleDown" class="right_ico"></fa-icon>
+        </div>
+        <div class="filter_tab">
+            Categories
+            <fa-icon [icon]="faAngleDown" class="right_ico"></fa-icon>
+        </div>
+        <div class="filter_tab">
+            On Sale In
+            <fa-icon [icon]="faAngleDown" class="right_ico"></fa-icon>
+        </div>
+    </div>
+</div>

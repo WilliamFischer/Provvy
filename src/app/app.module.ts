@@ -5,17 +5,28 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LandingComponent } from './landing/landing.component';
 
-import { provideFirebaseApp, getApp, initializeApp } from '@angular/fire/app';
+import { provideFirebaseApp, initializeApp } from '@angular/fire/app';
 import { getFirestore, provideFirestore } from '@angular/fire/firestore';
+import { getStorage, provideStorage, StorageModule } from '@angular/fire/storage';
+import { AngularFireStorageModule } from '@angular/fire/compat/storage';
 import { ArtistCreationCenterComponent } from './artist-creation-center/artist-creation-center.component';
 import { BaseComponent } from './base/base.component';
+import { MarketComponent } from './market/market.component';
+import { BigFilterComponent } from './tools/big-filter/big-filter.component';
+import { LittleFilterComponent } from './tools/little-filter/little-filter.component';
+import { NftGridComponent } from './tools/nft-grid/nft-grid.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
     AppComponent,
     LandingComponent,
     ArtistCreationCenterComponent,
-    BaseComponent
+    BaseComponent,
+    MarketComponent,
+    BigFilterComponent,
+    LittleFilterComponent,
+    NftGridComponent
   ],
   imports: [
     BrowserModule,
@@ -30,6 +41,9 @@ import { BaseComponent } from './base/base.component';
       measurementId: "G-HPGVCLVBL4"
     })),
     provideFirestore(() => getFirestore()),
+    provideStorage(() => getStorage()),
+    StorageModule,
+    FontAwesomeModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

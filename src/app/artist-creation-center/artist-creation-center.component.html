@@ -1,11 +1,25 @@
-<div class="step">
-    <div class="profile_image">
-        <img src="https://www.business2community.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png" />
+<div class="slideUpBigin">
+  <div class="step">
+    <!-- -->
+
+
+
+    <div class="custom-file" [ngClass]="{'non-dotted' : user.image}">
+      <input type="file" class="custom-file-input" (input)="submitPhoto($event)" name="imgurls" id="inputGroupFile01"
+        aria-describedby="inputGroupFileAddon01">
+
+      <label for="inputGroupFile01" class="profile_image">
+        <img *ngIf="!user.image && !path" src="https://www.business2community.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png" />
+        <img *ngIf="path && !user.image" src="assets/loader.gif" />
+        <img *ngIf="user.image" [src]="user.image" />
+      </label>
     </div>
 
+
     <form class="simple_details">
-        <input placeholder="Artist Name" /> <br />
-        <input placeholder="Artist Description"/> <br />
-        <button>Continue</button>
+      <input placeholder="Artist Name" /> <br />
+      <textarea placeholder="Artist Description"></textarea> <br />
+      <button type="submit" (click)="submitF()">Continue</button>
     </form>
+  </div>
 </div>

@@ -1,0 +1,95 @@
+<div class="nft_wrapper" [ngClass]="{'expanded' : !showSideFilter, 'chunky' : gridView === 2}">
+    <div class="nft" (click)="showNFT('1')" [ngClass]="{'mutant_nft' : displayingNFT === '1'}"
+        *ngIf="!displayingNFT.length  || displayingNFT === '1'">
+        <img
+            src="https://www.mustdobrisbane.com/sites/default/files/styles/mdb_full_width/public/featured/3%29-Warlimp-2.jpg?itok=92xz-sps" />
+
+        <div class="info">
+            <div class="left">
+                <h2>Tjapaltjarri Marnkurrpa</h2>
+                <h1>Unknown - 1981</h1>
+            </div>
+            <div class="right">
+                <h3>1.10ETH</h3>
+                <fa-icon [icon]="faHeart"></fa-icon>
+            </div>
+        </div>
+    </div>
+    <div class="nft" (click)="showNFT('2')" [ngClass]="{'mutant_nft' : displayingNFT === '2'}"
+        *ngIf="!displayingNFT.length  || displayingNFT === '2'">
+        <img src="https://paulinaduczman.com/wp-content/uploads/2021/05/2finished-insta-819x1024.jpg" />
+
+        <div class="info">
+            <div class="left">
+                <h2>Ronne Pierce</h2>
+                <h1>The Girl</h1>
+            </div>
+            <div class="right">
+                <h3>2.10ETH</h3>
+                <fa-icon [icon]="faHeart"></fa-icon>
+            </div>
+        </div>
+    </div>
+    <div class="nft" (click)="showNFT('3')" [ngClass]="{'mutant_nft' : displayingNFT === '3'}"
+    *ngIf="!displayingNFT.length  || displayingNFT === '3'">
+        <img src="https://www.diasfineart.co.uk/image/index_u576.jpg" />
+
+        <div class="info">
+            <div class="left">
+                <h2>Dias</h2>
+                <h1>Smudges</h1>
+            </div>
+            <div class="right">
+                <h3>1.10ETH</h3>
+                <fa-icon [icon]="faHeart"></fa-icon>
+            </div>
+        </div>
+    </div>
+    <div class="nft" (click)="showNFT('4')" [ngClass]="{'mutant_nft' : displayingNFT === '4'}"
+    *ngIf="!displayingNFT.length  || displayingNFT === '4'">
+        <img
+            src="https://gagosian.com/media/images/quarterly/interview-jenny-saville-painting-self/AsNF734wWRxm_600x600.jpg" />
+
+        <div class="info">
+            <div class="left">
+                <h2>Jenny Saville</h2>
+                <h1>Self Portrait</h1>
+            </div>
+            <div class="right">
+                <h3>0.43ETH</h3>
+                <fa-icon [icon]="faHeart"></fa-icon>
+            </div>
+        </div>
+    </div>
+    <div class="nft" (click)="showNFT('5')" [ngClass]="{'mutant_nft' : displayingNFT === '5'}"
+    *ngIf="!displayingNFT.length  || displayingNFT === '5'">
+        <img src="https://data.whicdn.com/images/316507036/original.jpg?t=1532337502" />
+
+        <div class="info">
+            <div class="left">
+                <h2>We Heart It Art Group</h2>
+                <h1>Mr. Dali</h1>
+            </div>
+            <div class="right">
+                <h3>5.10ETH</h3>
+                <fa-icon [icon]="faHeart"></fa-icon>
+            </div>
+        </div>
+    </div>
+    <div class="nft" (click)="showNFT('6')" [ngClass]="{'mutant_nft' : displayingNFT === '6'}"
+    *ngIf="!displayingNFT.length  || displayingNFT === '6'">
+        <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRURcoe-bUhszjbomVi0vdFoBQEHDsgAbMt7FjUnlqEJ5kYD9PS9alAGNSe4NPdVywsbrs&usqp=CAUg" />
+
+        <div class="info">
+            <div class="left">
+                <h2>James Bolivar Manson</h2>
+                <h1>Self</h1>
+            </div>
+            <div class="right">
+                <h3>1.10ETH</h3>
+                <fa-icon [icon]="faHeart"></fa-icon>
+            </div>
+        </div>
+    </div>
+</div>
