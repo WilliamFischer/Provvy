@@ -13,6 +13,7 @@ import {
   UploadTaskSnapshot,
   getDownloadURL
 } from '@angular/fire/storage';
+import { WalletService } from '../wallet.service';
 
 @Component({
   selector: 'app-artist-creation-center',
@@ -22,24 +23,27 @@ import {
 export class ArtistCreationCenterComponent implements OnInit {
 
   path: string = '';
+  step: number = 0;
 
-  uploadPercent: Observable<{
-    progress: number;
-    snapshot: UploadTaskSnapshot;
-  }>;
-
-  user: any = [];
+  user: any = {
+    image: '',
+    name: '',
+    description: '',
+    socials: {
+      twitter: '',
+      facebook: '',
+      instagram: '',
+    }
+  };
 
   constructor(
     public router: Router,
     private storage: Storage,
-    public route: ActivatedRoute
-  ) {
-  }
+    public route: ActivatedRoute,
+    public walletService: WalletService
+  ) { }
 
-  ngOnInit(): void {
-
-  }
+  ngOnInit(): void { }
 
   async submitPhoto(event: any) {
     console.log('UPLOADING IMAGE....');
@@ -74,8 +78,13 @@ export class ArtistCreationCenterComponent implements OnInit {
     });
   }
 
-  submitF(){
-    alert('This will take you to the next steps. ie. connecting wallet')
+  goToSocials() {
+    this.step = 1;
   }
+
+  async connectToMetaMask(){
+    await this.walletService.connectAccount();
+  }
+
 
 }
