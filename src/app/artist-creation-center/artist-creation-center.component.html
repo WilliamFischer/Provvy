@@ -9,8 +9,8 @@
         aria-describedby="inputGroupFileAddon01">
 
       <label for="inputGroupFile01" class="profile_image">
-        <img *ngIf="!user.image && !path" src="/assets/no-profile-image.png" />
-        <img *ngIf="path && !user.image" src="assets/loader.gif" />
+        <img *ngIf="!user.image && !path" class="zoomed" src="assets/no-profile-image.png" />
+        <img *ngIf="path && !user.image" class="zoomed" src="assets/loader.gif" />
         <img *ngIf="user.image" [src]="user.image" />
       </label>
     </div>
@@ -18,7 +18,7 @@
 
     <form class="simple_details" *ngIf="!step">
       <div class="inline">
-        <input placeholder="Artist Name" type="text"  [(ngModel)]="user.name" />
+        <input placeholder="Artist Name" type="text" [(ngModel)]="user.name" />
         <svg *ngIf="user.name.length >= 6" class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
           <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
           <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
@@ -27,20 +27,25 @@
 
       <br />
       <textarea placeholder="Artist Description" [(ngModel)]="user.description"></textarea> <br />
-      <button type="button" (click)="step = 1" [disabled]="user.name.length < 6" class="purple">Continue</button>
+      <button type="submit" (click)="step = 1" [disabled]="user.name.length < 6" class="purple">Continue</button>
     </form>
 
     <form class="simple_details" *ngIf="step == 1">
       <input placeholder="Twitter URL" type="url" [(ngModel)]="user.socials.twitter" /> <br />
       <input placeholder="Facebook URL" type="url" [(ngModel)]="user.socials.facebook" /> <br />
       <input placeholder="Instagram URL" type="url" [(ngModel)]="user.socials.instagram" /> <br />
-      <button type="button" class="purple" (click)="step = 2">Continue</button>
+      <button type="submit" class="purple" (click)="step = 2">Continue</button>
       <button type="button" (click)="step = 0">Previous</button>
     </form>
 
-    <form class="simple_details" *ngIf="step == 2">
-      <button type="button" class="purple" (click)="connectToMetaMask()">Connect MetaMask Wallet</button>
-    </form>
+    <div class="simple_details" *ngIf="step == 2">
+      <button class="purple" (click)="connectToMetaMask()">Connect MetaMask Wallet</button>
+    </div>
+
+    <div class="simple_details" *ngIf="step == 3">
+      <h3>Account creation complete</h3>
+      <button class="purple">Upload Works</button>
+    </div>
 
     <i class="mega-icon icon icon-thumbprint"></i>
     <i class="mega-icon icon-two icon icon-thumbprint"></i>

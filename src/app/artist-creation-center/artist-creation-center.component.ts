@@ -53,14 +53,17 @@ export class ArtistCreationCenterComponent implements OnInit {
     let file = event.target.files[0];
 
     if (file) {
-      this.path = (Math.random() + 1).toString(36).substring(7);
+      this.path = 'artsits_profiles/' + (Math.random() + 1).toString(36).substring(7);
 
       try {
         const storageRef = ref(this.storage, this.path);
         const task = uploadBytesResumable(storageRef, file);
         await task;
         const url = await getDownloadURL(storageRef);
-        this.user.image = url;
+
+        if (url) {
+          this.user.image = url;
+        }
       } catch (e: any) { alert(e); }
     } else {
       alert('Invalid file.')
@@ -82,8 +85,14 @@ export class ArtistCreationCenterComponent implements OnInit {
     this.step = 1;
   }
 
-  async connectToMetaMask(){
-    await this.walletService.connectAccount();
+  async connectToMetaMask() {
+    await this.walletService.connectAccount().then((d) => {
+      console.log(d)
+    })
+  }
+
+  createAccount() {
+    this.user.image = 'assets/no-profile-image.png';
   }
 
 

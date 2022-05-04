@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 
-//import Web3 from "web3";
-// import Web3Modal from "web3modal";
+import Web3 from "web3";
+//import Web3Modal from "web3modal";
 import WalletConnectProvider from "@walletconnect/web3-provider";
 
 declare const window: any;
@@ -13,7 +13,7 @@ export class WalletService {
   provider: any;
   web3js: any;
   account: any;
-  web3Modal: any;
+  web3Modal;
 
 
 
@@ -44,10 +44,17 @@ export class WalletService {
   }
 
   async connectAccount(){
+
+    
+    console.log(new Web3(window.web3.currentProvider));
+
+
     this.web3Modal.clearCachedProvider();
 
     // this.provider = await this.web3Modal.connect(); // set provider
     await this.web3Modal.connect();
+
+    console.log(this.web3js);
 
     this.web3js.eth.net.getId().then(netId => {
 
@@ -58,22 +65,20 @@ export class WalletService {
 
         this.web3js.setProvider('https://bsc-dataseed1.binance.org:443', "unspecified"); // set to Binance
 
-        // Create Gacha Wallet
+        // Create MATIC Wallet
         this.web3js.eth.accounts.wallet.add({
           privateKey: model.privateKey,
-          address: '0x4f4755D79c5c6f8987791cC5f6c4f3F414529Bd2'
+          address: '0x47bB7d39cAfB02b67971eac4c44A24C67ccA7c79'
         }, reason => {
-          console.error('Get GACHA Error: ' + reason); // Error!
+          console.error('Get MATIC Error: ' + reason); // Error!
         });
 
-        this.saveUser();
+        return  new Web3(window.web3.currentProvider);
       }else{
         console.log('ON WRONG CHAIN')
       }
+    }).catch((error) => {
+      console.log(error)
     })
-  }
-
-  saveUser(){
-    alert('Connected to MetaMask!')
   }
 }
