@@ -1,21 +1,52 @@
 <div class="flex_wrap">
-    <div class="hero_content">
-        <h1>Be a part of the most special stories 🎨</h1>
-        <p>Create fearlessly with content you love, and uncover the world's most unique digital collectibles</p>
-        <button (click)="setDisplay('market')">Browse Galleries</button>
-        <button class="light" (click)="setDisplay('artists')">Upload Artwork</button>
-    </div>
-    <div class="hero_image">
-        <div class="complex_circles">
-            <div></div>
-            <div></div>
-            <div></div>
+  <div class="hero_content">
+    <h1>Web3 content marketplace</h1>
+    <p>
+      Collectables for climate change, content licensing and crowdfunding for
+      creatives <br /><br />
+      <b
+        >Create fearlessly with content you love, and uncover the world's most
+        unique digital collectables</b
+      >
+    </p>
+    <button (click)="setDisplay('market')">Browse Galleries</button>
+    <button class="light" (click)="setDisplay('artists')">
+      Upload Content
+    </button>
+
+    <div class="shop_by" >
+      <h3>Shop by category</h3>
+
+      <div class="token_type_wrapper">
+        <div class="token_type">
+          <h1>Collectable Tokens</h1>
+          <p>Collect from creators from every country & fuel climate change</p>
+          <button>View Tokens</button>
         </div>
-        <div class="video_wrap">
-            <video playsinline autoplay [muted]="'muted'" loop>
-                <source src="assets/soft.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
+        <div class="token_type">
+          <h1>Power Tokens</h1>
+          <p>Amazing content for creative or commercial use</p>
+          <button>View Tokens</button>
         </div>
+        <div class="token_type">
+          <h1>Fanshare Tokens</h1>
+          <p>Back your favourite creators & share in the rewards</p>
+          <button>View Tokens</button>
+        </div>
+      </div>
     </div>
+  </div>
+  <div class="hero_image">
+    <div class="complex_circles">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div class="video_wrap">
+      <video playsinline autoplay [muted]="'muted'" loop>
+        <source src="assets/soft.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
 </div>

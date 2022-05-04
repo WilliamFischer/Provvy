@@ -1,59 +1,30 @@
-// {
-//   "compileOnSave": false,
-//   "compilerOptions": {
-//     "baseUrl": "./",
-//     "outDir": "./dist/out-tsc",
-//     "sourceMap": true,
-//     "declaration": false,
-//     "downlevelIteration": true,
-//     "experimentalDecorators": true,
-//     "allowJs": true,
-//     "strict": false,
-//     "moduleResolution": "node",
-//     "importHelpers": true,
-//     "allowSyntheticDefaultImports": true,
-//     "resolveJsonModule": true,
-//     "target": "es2015",
-//     "module": "es2020",
-//     "lib": [
-//       "es2018",
-//       "dom"
-//     ]
-//   },
-//   "angularCompilerOptions": {
-//     "strictInjectionParameters": false,
-//     "strictInputAccessModifiers": false,
-//     "strictTemplates": false
-//   }
-// }
-
-
-
-
-/* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
   "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
-    "forceConsistentCasingInFileNames": true,
-    "strict": false,
-    "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true,
+    "paths": {
+      "crypto": ["./node_modules/crypto-browserify"],
+      "stream": ["./node_modules/stream-browserify"],
+      "assert": ["./node_modules/assert"],
+      "http": ["./node_modules/stream-http"],
+      "https": ["./node_modules/https-browserify"],
+      "os": ["./node_modules/os-browserify"],
+      "process": ["./node_modules/process/browser"]
+    },
     "sourceMap": true,
     "declaration": false,
     "downlevelIteration": true,
     "experimentalDecorators": true,
+    "allowJs": true,
+    "strict": false,
     "moduleResolution": "node",
     "importHelpers": true,
     "allowSyntheticDefaultImports": true,
     "resolveJsonModule": true,
     "target": "es2015",
     "module": "es2020",
-    "lib": [
-      "es2018",
-      "dom"
-    ]
+    "lib": ["es2018", "dom"]
   },
   "angularCompilerOptions": {
     "strictInjectionParameters": false,
@@ -61,4 +32,3 @@
     "strictTemplates": false
   }
 }
-

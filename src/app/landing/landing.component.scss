@@ -34,6 +34,41 @@
         box-shadow: none;
         margin-right: 0;
     }
+
+    .shop_by {
+        margin-top: 60px;
+
+        .token_type_wrapper {
+            display: inline-flex;
+            flex-wrap: wrap;
+
+            .token_type {
+                width: 30%;
+
+                h1 {
+                    font-size: 14px;
+                }
+
+                p {
+                    font-size: 10px;
+                    height: 45px;
+                    width: 80%;
+                }
+
+                button {
+                    border-radius: 4px;
+                    padding: 8px 24px;
+                    font-size: 10px;
+                    margin: 0;
+                    box-shadow: none;
+                    text-transform: uppercase;
+                    background: #cdcdcd;
+                    color: #393461;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
 }
 
 .hero_image {
@@ -72,7 +107,6 @@
         margin-top: -250px;
         border-radius: 190px 190px 20px 20px;
         box-shadow: -20px -15px 20px #0000006b;
-        z-index: 9000;
         position: relative;
         margin-left: auto;
         margin-right: auto;
@@ -82,6 +116,7 @@
             height: 100%;
             object-fit: cover;
             z-index: 10;
+            background: #3f3f3f;
         }
     }
 }
